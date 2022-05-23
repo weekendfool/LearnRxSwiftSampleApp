@@ -15,10 +15,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var sampleCountButton: UIButton!
     @IBOutlet weak var sampleResetButton: UIButton!
     
+    @IBOutlet weak var sampleLeftTextField: UITextField!
+    @IBOutlet weak var sampleCenterTextField: UITextField!
+    @IBOutlet weak var sampleRightTextField: UITextField!
+    
+    
     // MARK: - 変数
     let count: Int = 0
     
     private var viewModel: ViewModel!
+    
+    let disposeBag = DisposeBag()
     
     // MARK: - ライフサイクル
     override func viewDidLoad() {
@@ -28,7 +35,20 @@ class ViewController: UIViewController {
             resetButtonTap: sampleResetButton.rx.tap.asSignal(),
             countButtonTap: sampleCountButton.rx.tap.asSignal()
         )
-//        setup2()
+        setup3()
+        
+       
+        
+//        let subject = Observable.combineLatest(
+//            sampleLeftTextField.rx.text.orEmpty,
+//            sampleCenterTextField.rx.text.orEmpty,
+//            sampleRightTextField.rx.text.orEmpty
+//        ) { value1, value2, value3 -> Int in
+//            return (Int(value1) ?? 0) + (Int(value2) ?? 0) + (Int(value3) ?? 0)
+//        }
+//            .map { $0.description }
+//            .bind(to: sampleLbel.rx.text)
+//            .disposed(by: disposeBag)
     }
 
     // MARK: - 関数
@@ -73,5 +93,21 @@ class ViewController: UIViewController {
         subject.onNext(111)
         subject.onCompleted()
     }
+    
+    func setup3() {
+//        let disposeBag = DisposeBag()
+        
+        let subject = Observable.combineLatest(
+            sampleLeftTextField.rx.text.orEmpty,
+            sampleCenterTextField.rx.text.orEmpty,
+            sampleRightTextField.rx.text.orEmpty
+        ) { value1, value2, value3 -> Int in
+            return (Int(value1) ?? 0) + (Int(value2) ?? 0) + (Int(value3) ?? 0)
+        }
+            .map { $0.description }
+            .bind(to: sampleLbel.rx.text)
+            .disposed(by: disposeBag)
+    }
+    
 }
 

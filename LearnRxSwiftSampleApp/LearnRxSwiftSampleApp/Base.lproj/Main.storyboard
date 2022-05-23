@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B72-6k-1xE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B72-6k-1xE">
                                 <rect key="frame" x="0.0" y="104" width="414" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="qM3-yC-mFD"/>
@@ -31,7 +31,7 @@
                                     <constraint firstAttribute="height" constant="50" id="nc3-yf-Vrm"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="count"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksx-Hj-7xf">
                                 <rect key="frame" x="156" y="369" width="102" height="50"/>
@@ -39,32 +39,65 @@
                                     <constraint firstAttribute="height" constant="50" id="gKj-tD-ygW"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="reset"/>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mtt-x8-5gl">
+                                <rect key="frame" x="0.0" y="192" width="100" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="cwP-dl-tYi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qwx-kA-bbK">
+                                <rect key="frame" x="314" y="192" width="100" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="FxH-qw-DAl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UIy-uR-uZB">
+                                <rect key="frame" x="158.5" y="192" width="100" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Bvh-r0-Sxe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ksx-Hj-7xf" secondAttribute="trailing" constant="156" id="1eI-Yg-oGb"/>
+                            <constraint firstItem="mtt-x8-5gl" firstAttribute="top" secondItem="B72-6k-1xE" secondAttribute="bottom" constant="43" id="1gd-IU-tmb"/>
+                            <constraint firstItem="UIy-uR-uZB" firstAttribute="leading" secondItem="mtt-x8-5gl" secondAttribute="trailing" constant="58.5" id="9bX-16-Npn"/>
                             <constraint firstItem="ksx-Hj-7xf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="156" id="F9s-y7-c7K"/>
+                            <constraint firstItem="qwx-kA-bbK" firstAttribute="top" secondItem="B72-6k-1xE" secondAttribute="bottom" constant="43" id="Mx6-Ao-4cM"/>
                             <constraint firstItem="QWq-Ex-8p1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="156" id="PDK-9V-IoO"/>
+                            <constraint firstItem="UIy-uR-uZB" firstAttribute="top" secondItem="B72-6k-1xE" secondAttribute="bottom" constant="43" id="cio-Yf-xd3"/>
+                            <constraint firstItem="mtt-x8-5gl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dhi-d4-yrJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QWq-Ex-8p1" secondAttribute="trailing" constant="156" id="hkd-wp-Amk"/>
                             <constraint firstItem="B72-6k-1xE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hln-hW-45c"/>
                             <constraint firstItem="ksx-Hj-7xf" firstAttribute="top" secondItem="QWq-Ex-8p1" secondAttribute="bottom" constant="68" id="jsx-92-4uj"/>
+                            <constraint firstItem="qwx-kA-bbK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nhv-ba-ddm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="B72-6k-1xE" secondAttribute="trailing" id="xeZ-Iy-KUv"/>
                             <constraint firstItem="B72-6k-1xE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="yEd-3u-81p"/>
                             <constraint firstItem="QWq-Ex-8p1" firstAttribute="top" secondItem="B72-6k-1xE" secondAttribute="bottom" constant="102" id="yhV-mN-Y0d"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="sampleCenterTextField" destination="UIy-uR-uZB" id="Pws-Me-Kid"/>
                         <outlet property="sampleCountButton" destination="QWq-Ex-8p1" id="KFq-eX-qje"/>
                         <outlet property="sampleLbel" destination="B72-6k-1xE" id="L66-Ze-Agl"/>
+                        <outlet property="sampleLeftTextField" destination="mtt-x8-5gl" id="hY0-TV-994"/>
                         <outlet property="sampleResetButton" destination="ksx-Hj-7xf" id="3A5-gf-35q"/>
+                        <outlet property="sampleRightTextField" destination="qwx-kA-bbK" id="l8I-dY-R6P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="44.927536231884062" y="83.705357142857139"/>
+            <point key="canvasLocation" x="580" y="62"/>
         </scene>
     </scenes>
     <resources>
