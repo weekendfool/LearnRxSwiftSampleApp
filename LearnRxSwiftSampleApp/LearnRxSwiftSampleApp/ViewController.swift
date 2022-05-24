@@ -109,5 +109,9 @@ class ViewController: UIViewController {
             .disposed(by: disposeBag)
     }
     
+    func setup4() {
+        
+    }
+    
 }
 
